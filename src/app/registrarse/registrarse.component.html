@@ -1,0 +1,122 @@
+<style>
+    .back {
+        background: url('assets/img/logiin.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .background {
+        background: white;
+        padding: 0;
+    }
+</style>
+
+
+<body class="background">
+    <div class="container w-75 back-white mt-5 rounded shadow">
+        <div class="row align-items-stretch">
+
+            <div class="col back d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+                <!--<img src="assets/img/Login2.jpg" alt="" height="800">-->
+            </div>
+
+
+            <div class="col back-white p-5 rounded-end ">
+                <div class="text-end">
+                    <img src="assets/img/logo2.png" width="100" alt="">
+                </div>
+
+                <h2 class="fw-bold text-center pt-5 py-5">Bienvenidos</h2>
+                <div class="login-page">
+                    <mat-card class="mat-elevation-z12" style="color:grey">
+                        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+                            <mat-tab label="Iniciar sesión">
+                                <mat-card-content>
+                                    <form action="">
+                                        <mat-form-field>
+                                            <input matInput placeholder="Correo electrónico" required name="email" ngModel #email="ngModel">
+                                            <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                                            <mat-icon matSuffix>email</mat-icon>
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput placeholder="Contraseña" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+                                            <mat-error *ngIf="password.errors && password.errors.required">
+                                                Password is required
+                                            </mat-error>
+                                            <mat-error *ngIf="password.errors && password.errors.minlength">
+                                                Password must be of length 6
+                                            </mat-error>
+                                            <mat-icon matSuffix>lock</mat-icon>
+                                        </mat-form-field>
+                                        <mat-checkbox>Recordar usuario</mat-checkbox>
+                                        <button mat-raised-button style="background-color:#458FF6; color:white" class="login-button">
+                                  Iniciar sesión
+                                </button>
+
+                                        <button mat-raised-button class="login-button">
+                                    Iniciar sesión con Google
+                                  </button>
+                                        <br>
+                                        <div class="my-3 center" style="text-align:center;">
+                                            <span>¿Es tu primera vez en Onlab? <a href="#">Registrate</a></span>
+
+                                        </div>
+                                    </form>
+                                </mat-card-content>
+                            </mat-tab>
+                            <mat-tab label="Registrar">
+                                <mat-card-content>
+                                    <form action="">
+                                        <mat-form-field>
+                                            <input matInput placeholder="Nombre completo" required name="username" ngModel #username="ngModel">
+                                            <mat-icon matSuffix>perm_identity</mat-icon>
+                                            <mat-error *ngIf="username.invalid">
+                                                Username is required
+                                            </mat-error>
+
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput placeholder="Correo electrónico" required name="email" ngModel #email="ngModel">
+                                            <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                                            <mat-icon matSuffix>email</mat-icon>
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput placeholder="Contraseña" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+                                            <mat-error *ngIf="password.errors && password.errors.required">
+                                                Password is required
+                                            </mat-error>
+                                            <mat-error *ngIf="password.errors && password.errors.minlength">
+                                                Password must be of length 6
+                                            </mat-error>
+                                            <mat-icon matSuffix>lock</mat-icon>
+
+                                        </mat-form-field>
+                                        <mat-form-field>
+                                            <input matInput placeholder="Escribir nuevamente la contraseña" type="password" required minlength="6" name="repassword" ngModel #repassword="ngModel">
+                                            <mat-error *ngIf="repassword.errors && repassword.errors.required">
+                                                Re-Enter Password is required
+                                            </mat-error>
+                                            <mat-icon matSuffix>lock</mat-icon>
+                                        </mat-form-field>
+                                        <button mat-raised-button style="background-color:#458FF6; color:white" class="login-button">
+                               Registrar
+                              </button>
+
+                                        <button mat-raised-button class="login-button">
+                                Registrar con Google
+                              </button>
+                                        <br>
+                                        <div class="my-3 center" style="text-align:center;">
+                                            <span>¿Ya te has registrado? <a href="#"> Inicia sesión en tu cuenta</a></span>
+
+                                        </div>
+                                    </form>
+                                </mat-card-content>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
