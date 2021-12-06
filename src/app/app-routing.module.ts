@@ -6,14 +6,22 @@ import { PacienteComponent } from './paciente/paciente.component';
 import { PreguntasComponent } from './preguntas/preguntas.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { ServicioComponent } from './servicio/servicio.component';
+import { UltrasonidoComponent } from './ultrasonido/ultrasonido.component';
+import { CovidComponent } from './covid/covid.component';
+import { RayosxComponent } from './rayosx/rayosx.component';
+import { MastografiaComponent } from './mastografia/mastografia.component';
 
-const routes: Routes = [  {path: 'home', component:HomeComponent},
-{path: 'servicio', component:ServicioComponent},
-{path: 'paciente', component:PacienteComponent},
-{path: 'preguntas', component:PreguntasComponent},
-{path: 'about', component:AboutComponent},
-{path: 'registrarse', component:RegistrarseComponent}
-
+const routes: Routes = [  {path: '', component:HomeComponent, pathMatch:'full'},
+{path: 'servicio', component:ServicioComponent, pathMatch:'full'},
+{path: 'paciente', component:PacienteComponent, pathMatch:'full'},
+{path: 'preguntas', component:PreguntasComponent, pathMatch:'full'},
+{path: 'about', component:AboutComponent, pathMatch:'full'},
+{path: 'registrarse', component:RegistrarseComponent, pathMatch:'full'},
+{path: 'ultrasonido', component:UltrasonidoComponent, pathMatch:'full'},
+{path: 'covid', component:CovidComponent, pathMatch:'full'},
+{path: 'rayox', component:RayosxComponent, pathMatch:'full'},
+{path: 'mastografia', component:MastografiaComponent, pathMatch:'full'},
+{path:'**', redirectTo:''}
 ];
 
 @NgModule({

@@ -23,6 +23,10 @@ import {MatInputModule} from '@angular/material/input';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UltrasonidoComponent } from './ultrasonido/ultrasonido.component';
+import { CovidComponent } from './covid/covid.component';
+import { RayosxComponent } from './rayosx/rayosx.component';
+import { MastografiaComponent } from './mastografia/mastografia.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     NavbarComponent,
     RegistrarseComponent,
+    UltrasonidoComponent,
+    CovidComponent,
+    RayosxComponent,
+    MastografiaComponent,
     
   ],
   imports: [

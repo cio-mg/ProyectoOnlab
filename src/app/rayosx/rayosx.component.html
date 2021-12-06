@@ -1,0 +1,160 @@
+<body>
+    <section class="contact-box">
+        <div class="row no-gutters g-0">
+            <div class="col-xl-5 col-lg-12 image-container">
+                <div class="position-static testiomonial p-4">
+                    <h1 class="step-border font-weight-bold mb-3  "> Rayos X</h1>
+                    <br>
+                    <div class="row ml-1">
+                        <p>Contamos con equipos de rayos x de alta resolución, con el objeto de auxiliar a los médicos en la integración de un diagnóstico, mediante imágenes de calidad.<br><br>Nuestros estudios especializados son interpretados por profesionales
+                            de la salud especialistas en la materia, quienes cuentan con certificación expedida por una institución de enseñanza superior o de salud reconocida oficialmente. <br><br> Algunos estudios con los que contamos son: <br><br>
+                            <li>Rayos x de extremidades</li>
+                            <li>Rayos x de abdomen</li>
+                            <li>Rayos x de cabeza</li> <br> <strong>Consulta previamente a tú médico. Recuerda que es el profesional facultado para indicarte el estudio apropiado de acuerdo con tu historial clínico. Él mismo deberá interpretar tus resultados.</strong>
+                        </p>
+                    </div>
+                    <div class="pic"><img src="assets/img/rayosx.jpg" class="img-fluid" alt=""></div>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-12 d-flex">
+                <div class="container align-self-center p-6 pt-4">
+                    <h1 class="font-weight-bold mb-3">Agendar cita</h1>
+                    <p class="mb-4">Ingresa la siguiente información para agendar una cita en laboratorios Onlab</p>
+
+                    <form [formGroup]="form">
+                        <div class="form-group mt-2 mb-4 ">
+                            <label class="font-weight-bold">Ingresa el nombre</label>
+                            <input type="email " class="form-control input-text " name="correo " formControlName="correo " required="required " placeholder="Nombre de estudio ">
+                        </div>
+                        <label class="font-weight-bold ">Selecciona tu fecha y horario</label>
+                        <div class="row  ">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold"></label>
+                                <input type="date" class="form-control" name="nacimiento " formControlName="nacimiento " required="required" placeholder="Tu fecha de nacimiento ">
+                            </div>
+                            <!--<div class="col ">
+                                <input type="time " class="col-12 text-muted " name="hora " formControlName="hora " required="required " min="07:00 " max="12:00 " step="3600 " />
+                            </div>-->
+
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold" for="standard-select"></label>
+                                <div class="select">
+                                    <select id="standard-select">
+                                        <option selected="true" disabled="disabled">Seleccione su sexo</option>
+                                        <option value="Option 1">Hombre</option>
+                                        <option value="Option 2">Mujer</option>
+                                    </select>
+                                    <span class="focus"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="font-weight-bold ">Por favor registrar los datos tal cual aparecen en su identificación oficial</label>
+
+                        <div class="row mt-2 ">
+
+                            <div class="col ">
+                                <input type="text " class="form-control input-text " name="nombre " formControlName="nombre " required="required " placeholder="Nombre(s) ">
+                            </div>
+                            <div class="col ">
+                                <input type="text " class="form-control input-text " name="apellidopaterno " formControlName="apellidopaterno " required="required " placeholder="Apellido paterno ">
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col ">
+                                <label class="fw-bold "></label>
+                                <input type="text " class="form-control input-text " name="apellidomaterno " formControlName="apellidomaterno " required="required " placeholder="Apellido materno ">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold"></label>
+                                <input type="date" class="form-control" name="nacimiento " formControlName="nacimiento " required="required" placeholder="Tu fecha de nacimiento ">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col ">
+                                <label class="fw-bold "></label>
+                                <input type="text " class="form-control input-text " name="cp " formControlName="cp " required="required " minlength="5 " maxlength="5 " placeholder="Código Postal ">
+                                <span class="form-text text-danger " *ngIf="form.controls.cp?.invalid && form.controls.cp?.touched ">Ingrese 5 dígitos</span>
+                            </div>
+                            <div class="col ">
+                                <label class="fw-bold "></label>
+                                <input type="text " class="form-control input-text " name="colonia " formControlName="colonia " required="required " placeholder="Colonia ">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col ">
+                                <label class="fw-bold "></label>
+                                <input type="text " class="form-control input-text " name="calle " formControlName="calle " required="required " placeholder="Calle ">
+                            </div>
+                            <div class="col ">
+                                <label class="fw-bold "></label>
+                                <input type="text " class="form-control input-text " name="numdir " formControlName="numdir " required="required " placeholder="Número ">
+                            </div>
+                        </div>
+                        <br>
+                        <label class="font-weight-bold ">Contacto</label>
+                        <input type="text " class="form-control input-text mt-2 " name="tel " formControlName="tel " required="required " placeholder="Ingrese número telefónico ">
+
+
+                        <div class="form-group mt-2 mb-4 ">
+                            <input type="email " class="form-control input-text " name="correo " formControlName="correo " required="required " placeholder="Ingrese correo electrónico ">
+                        </div>
+                        <br>
+                        <button class="col-12 btn btn-primary " [disabled]="form.invalid " (click)="Guardar() ">Guardar</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-3 ">
+                    <h4 class="mb-3 ">Nosotros</h4>
+                    <a>
+                    Onlab puede analizar una gran cantidad de muestras biológicas y cultivos diariamente,
+                </a>
+                </div>
+                <div class="col-md-3 ">
+                    <h4 class="mb-3 ">Menu</h4>
+                    <ul class="list-unstyled ">
+                        <li><a href=" ">Nosotros</a></li>
+                        <li><a href=" ">Servicios</a></li>
+                        <li><a href=" ">Pacientes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ">
+                    <h4 class="mb-3 ">Servicios</h4>
+                    <ul class="list-unstyled ">
+                        <li><a href=" ">Laboratorio</a></li>
+                        <li><a href=" ">Pruebas</a></li>
+                        <li>
+                            <a href=" ">Preguntas frecuentes</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ">
+                    <h4 class="mb-3 ">Redes Sociales</h4>
+                    <div class="social ">
+                        <a href="" target="_blank "><i class="fab fa-facebook-f " aria-hidden="true "></i></a>
+                    </div>
+                    <div class="social ">
+                        <a href="" target="_blank "><i class="fab fa-youtube " aria-hidden="true "></i></a>
+                    </div>
+                    <div class="social ">
+                        <a href="# "><i class="fab fa-instagram " aria-hidden="true "></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row ">
+                <div class="col-12 text-center my-3 ">
+                    <a>Onlab © 2021 |</a>
+                    <a href="# ">  Aviso de privacidad | Términos y condiciones </a>
+                    <a>| Todos los derechos reservados  </a>
+                </div>
+            </div>
+        </div>
+    </footer>
